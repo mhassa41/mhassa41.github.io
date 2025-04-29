@@ -4,25 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My GitHub Page</h1>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <td>Muhammad Hassan</td>
-        </tr>
-        <tr>
-            <th>Introduction</th>
-            <td>
-                Hello, my name is Muhammad Hassan. I am currently pursuing a bachelor's degree in Information Technology with a strong focus on Cybersecurity.
-                I enjoy learning about network security, ethical hacking, and digital forensics. My goal is to work as an Ethical Hacker or Penetration Tester for government agencies like DoD, DHS, or the NSA.
-            </td>
-        </tr>
-        <tr>
-            <th>Hobbies</th>
-            <td>Going to the Gym, Coding, playing video games, soccer, traveling, and reading.</td>
-        </tr>
-    </table>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="ethics.html">IT Ethics</a></li>
+                <li><a href="hobbies.html">My Hobbies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <h1>Welcome to My GitHub Page</h1>
+            <div class="profile-card">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td>Muhammad Hassan</td>
+                    </tr>
+                    <tr>
+                        <th>Introduction</th>
+                        <td>
+                            Hello, my name is Muhammad Hassan. I am currently pursuing a bachelor's degree in Information Technology with a strong focus on Cybersecurity.
+                            I enjoy learning about network security, ethical hacking, and digital forensics. My goal is to work as an Ethical Hacker or Penetration Tester for government agencies like DoD, DHS, or the NSA.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Muhammad Hassan. All rights reserved.</p>
+    </footer>
 </body>
 </html>
