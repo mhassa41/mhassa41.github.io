@@ -292,3 +292,16 @@ footer {
         left: 0%;
     }
 }
+.infographic-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.infographic-media img,
+.infographic-media iframe {
+    flex: 1;
+    min-width: 300px;
+}
+
