@@ -277,24 +277,31 @@
         }
 
         .media-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: stretch;
-}
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: stretch;
+            justify-content: center;
+            margin: 40px 0;
+        }
 
-.media-container img,
-.media-container .video-container {
-    flex: 1 1 500px;
-    max-width: 500px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
+        .media-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+        }
 
+        .media-container img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            object-fit: cover;
+            flex-grow: 1;
+        }
 
         .media-container img:hover {
             transform: scale(1.02) translateY(-5px);
@@ -302,16 +309,15 @@
         }
 
         .video-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            flex-grow: 1;
+        }
 
         .video-container:hover {
             transform: translateY(-5px);
@@ -466,10 +472,12 @@
             .media-container {
                 gap: 2rem;
                 margin: 2.5rem 0;
+                flex-direction: column;
+                align-items: center;
             }
             
-            .media-container img,
-            .video-container {
+            .media-item {
+                width: 100%;
                 max-width: 100%;
             }
             
@@ -559,9 +567,13 @@
             <div class="infographic">
                 <h2>Facial Recognition Controversy at a Glance</h2>
                 <div class="media-container">
-                    <img src="frt-infograph.png" alt="Facial recognition controversy infographic" style="max-height: 400px;">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/2zetsuK0xXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="media-item">
+                        <img src="frt-infograph.png" alt="Facial recognition controversy infographic">
+                    </div>
+                    <div class="media-item">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/2zetsuK0xXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <p><em>Key statistics and facts about facial recognition technology</em></p>
