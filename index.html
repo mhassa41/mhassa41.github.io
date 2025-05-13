@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facial Recognition & Surveillance Technology</title>
+    <style>
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .media-container img {
+            width: 300px;
+            height: auto;
+        }
+        .video-container {
+            position: relative;
+            width: 500px;
+            padding-bottom: 28.125%; /* 16:9 aspect ratio */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -60,7 +85,12 @@
 
             <div class="infographic">
                 <h2>Facial Recognition Controversy at a Glance</h2>
-                <img src="frt-infograph.png" alt="Facial recognition controversy infographic">
+                <div class="media-container">
+                    <img src="frt-infograph.png" alt="Facial recognition controversy infographic">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2zetsuK0xXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
                 <p><em>Key statistics and facts about facial recognition technology</em></p>
             </div>
         </section>
