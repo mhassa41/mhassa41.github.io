@@ -292,27 +292,31 @@ footer {
         left: 0%;
     }
 }
-.media-container {
+.media-row {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: center;
-    justify-content: center;
     margin: 20px 0;
 }
 
-.media-container img {
-    max-width: 50%;
+.media-item {
+    flex: 1;
+    min-width: 300px;
+}
+
+.media-item img {
+    width: 100%;
     height: auto;
 }
 
-.video-wrapper {
+.video-container {
     position: relative;
-    width: 50%;
-    padding-bottom: 28.125%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
 }
 
-.video-wrapper iframe {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
