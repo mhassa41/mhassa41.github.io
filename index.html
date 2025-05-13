@@ -1,107 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facial Recognition & Surveillance Technology</title>
-    <style>
-        .media-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .media-container img {
-            width: 600px;
-            height: auto;
-        }
-        .video-container {
-            position: relative;
-            width: 500px;
-            padding-bottom: 28.125%; /* 16:9 aspect ratio */
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facial Recognition & Surveillance Technology</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body[data-theme="dark"] {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    body[data-theme="dark"] header,
+    body[data-theme="dark"] nav,
+    body[data-theme="dark"] footer {
+      background-color: #111;
+      color: #fff;
+    }
+
+    body[data-theme="dark"] .card,
+    body[data-theme="dark"] .infographic,
+    body[data-theme="dark"] .lens,
+    body[data-theme="dark"] .timeline-content {
+      background-color: #2a2a2a;
+      color: #e0e0e0;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+      background-color: var(--secondary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581090700227-1e37b1904183?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat, linear-gradient(135deg, var(--secondary), var(--primary));
+      background-blend-mode: overlay;
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Facial Recognition & Surveillance Technology</h1>
-            <p>Examining the ethical implications and societal impact of biometric identification systems</p>
-        </div>
-    </header>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="introduction.html">Introduction</a></li>
-            <li><a href="applications.html">Applications</a></li>
-            <li><a href="ethics.html">Ethical Analysis</a></li>
-            <li><a href="policy.html">Policy Recommendations</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
-
+  <header>
     <div class="container">
-        <section>
-            <div class="hero">
-                <h2>The Age of Facial Recognition</h2>
-                <p>How biometric surveillance is reshaping privacy, security, and civil liberties in the 21st century</p>
-            </div>
-
-            <div class="card">
-                <h2>About This Project</h2>
-                <p>This website explores the complex landscape of facial recognition technology (FRT) through multiple perspectives:</p>
-
-                <div class="grid">
-                    <div>
-                        <h3>Technology</h3>
-                        <p>Understanding how FRT works and its rapid development</p>
-                    </div>
-                    <div>
-                        <h3>Applications</h3>
-                        <p>Real-world uses in law enforcement, retail, and security</p>
-                    </div>
-                    <div>
-                        <h3>Ethics</h3>
-                        <p>Examining FRT through rights-based and consequentialist frameworks</p>
-                    </div>
-                    <div>
-                        <h3>Policy</h3>
-                        <p>Recommendations for responsible development and deployment</p>
-                    </div>
-                </div>
-
-                <p>Navigate using the menu above to explore these topics in depth.</p>
-            </div>
-
-            <div class="infographic">
-                <h2>Facial Recognition Controversy at a Glance</h2>
-                <div class="media-container">
-                    <img src="frt-infograph.png" alt="Facial recognition controversy infographic">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/2zetsuK0xXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <p><em>Key statistics and facts about facial recognition technology</em></p>
-            </div>
-        </section>
+      <h1>Facial Recognition & Surveillance Technology</h1>
+      <p>🔍 Exploring the ethics, applications, and impact of biometric surveillance</p>
     </div>
+  </header>
 
-    <footer>
-        <div class="container">
-            <h2>About This Project</h2>
-            <p>This website was created for IT 304 Final Group Project at George Mason by Muhammad Hassan. Our goal is to foster informed discussion about facial recognition technology's societal impacts.</p>
-            <p>Last updated: May 2025</p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="applications.html">Applications</a></li>
+      <li><a href="ethics.html">Ethical Analysis</a></li>
+      <li><a href="policy.html">Policy Recommendations</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h2>🚨 The Age of Facial Recognition</h2>
+      <p>How biometric surveillance is reshaping privacy, security, and civil liberties in the 21st century</p>
+    </section>
+
+    <section class="card">
+      <h2>📚 About This Project</h2>
+      <p>This website explores the complex landscape of facial recognition technology (FRT) through multiple perspectives:</p>
+
+      <div class="grid">
+        <div>
+          <h3>🔧 Technology</h3>
+          <p>Understanding how FRT works and its rapid development</p>
         </div>
-    </footer>
+        <div>
+          <h3>🏛️ Applications</h3>
+          <p>Real-world uses in law enforcement, retail, and security</p>
+        </div>
+        <div>
+          <h3>⚖️ Ethics</h3>
+          <p>Examining FRT through rights-based and consequentialist frameworks</p>
+        </div>
+        <div>
+          <h3>🛡️ Policy</h3>
+          <p>Recommendations for responsible development and deployment</p>
+        </div>
+      </div>
+
+      <p><strong>💡 Tip:</strong> Use the navigation menu above to dive deeper into each topic.</p>
+    </section>
+
+    <section class="infographic">
+      <h2>📊 Facial Recognition Controversy at a Glance</h2>
+      <div class="media-container">
+        <img src="frt-infograph.png" alt="Facial recognition controversy infographic" />
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/2zetsuK0xXY" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p><em>Key statistics and facts about facial recognition technology</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <h2>👨‍💻 About This Website</h2>
+      <p>This site was built for the <strong>IT 304 Final Group Project</strong> at George Mason by Muhammad Hassan. Our goal is to foster informed discussion about the societal impacts of facial recognition technology.</p>
+      <p><small>🗓️ Last updated: May 2025</small></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+  </script>
 </body>
 </html>
