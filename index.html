@@ -279,7 +279,7 @@
         .media-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 30px;
             align-items: center;
             justify-content: center;
             margin: 40px 0;
@@ -287,11 +287,12 @@
 
         .media-container img {
             width: 100%;
-            max-width: 300px;
+            max-width: 500px;
             height: auto;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            object-fit: contain;
         }
 
         .media-container img:hover {
@@ -303,7 +304,7 @@
             position: relative;
             width: 100%;
             max-width: 500px;
-            padding-bottom: 28.125%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -465,6 +466,11 @@
                 margin: 2.5rem 0;
             }
             
+            .media-container img,
+            .video-container {
+                max-width: 100%;
+            }
+            
             .infographic {
                 padding: 2rem 1.5rem;
                 margin: 3rem 0;
@@ -551,7 +557,7 @@
             <div class="infographic">
                 <h2>Facial Recognition Controversy at a Glance</h2>
                 <div class="media-container">
-                    <img src="frt-infograph.png" alt="Facial recognition controversy infographic">
+                    <img src="frt-infograph.png" alt="Facial recognition controversy infographic" style="max-height: 400px;">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/2zetsuK0xXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
